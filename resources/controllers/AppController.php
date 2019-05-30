@@ -4,6 +4,7 @@
 	
 	use WPKit\Invoker\Controller;
 	use Illuminate\Support\Facades\Input;
+	use GutesObjectPlugin\GutesObjectPlugin\Database;
 	
 	class AppController extends Controller {
 		
@@ -27,6 +28,18 @@
 				return $types;
 				
 			}, 1);
+			
+			action('after_switch_theme', function() {
+			
+				(new Database())->activate_gutes_array_save();
+				
+			});
+			
+			action('switch_theme', function() {
+			
+				(new Database())->deactivate_gutes_array_save();
+				
+			});
 			
 			parent::beforeFilter($request);
 			

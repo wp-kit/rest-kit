@@ -1,2 +1,2 @@
-import '../../vendor/wp-kit/assets/main'
+import '../../vendor/wp-kit/gutenberg-object-plugin/assets/js/main.js'
 import './blocks/';

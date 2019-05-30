@@ -8,6 +8,6 @@
     "wp-kit/foundation": "^2.0",
     "filp/whoops": "^2.3",
     "wp-kit/invoker": "^2.0",
-    "wp-kit/gutenberg-object-plugin": "^2.0.1"
+    "wp-kit/gutenberg-object-plugin": "2.0.1"
   }
 }
