@@ -1,0 +1,9 @@
+vendor/
+composer.lock
+package-lock.json
+resources/storage
+manifest.json
+node_modules
+admin
+build
+.DS_Store

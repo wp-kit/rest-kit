@@ -1,0 +1,12 @@
+{
+  "name": "wp-kit/rest-kit",
+  "type": "project",
+  "license": "MIT",
+  "description": "WordPress Rest API Kit",
+  "require": {
+    "wp-kit/registry": "^2.0",
+    "wp-kit/foundation": "^2.0",
+    "filp/whoops": "^2.3",
+    "wp-kit/invoker": "^2.0"
+  }
+}
