@@ -6,7 +6,7 @@
 	use Illuminate\Support\Facades\Input;
 	use GutesObjectPlugin\GutesObjectPlugin\Database;
 	
-	class AppController extends Controller {
+	class GutenbergController extends Controller {
 		
 		protected $scripts_action = 'admin_enqueue_scripts';
 		
