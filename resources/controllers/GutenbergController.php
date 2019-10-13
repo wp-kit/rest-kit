@@ -5,12 +5,19 @@
 	use WPKit\Invoker\Controller;
 	use Illuminate\Support\Facades\Input;
 	use GutesObjectPlugin\GutesObjectPlugin\Database;
+	use GutesObjectPlugin\GutesObjectPlugin;
 	
 	class GutenbergController extends Controller {
 		
 		protected $scripts_action = 'admin_enqueue_scripts';
 		
 		public function beforeFilter(Input $request) {
+			
+			if( empty( $GLOBALS['gutenbergObjectPlugin'] ) ) {
+			
+				GutesObjectPlugin::init();
+				
+			}
 			
 			action('after_switch_theme', function() {
 			
