@@ -4,7 +4,7 @@
 	
 	use WPKit\Invoker\Controller;
 	use Illuminate\Support\Facades\Input;
-	use GutesObjectPlugin\GutesObjectPlugin\Database;
+	use GutesObjectPlugin\Database;
 	use GutesObjectPlugin\GutesObjectPlugin;
 	
 	class GutenbergController extends Controller {
