@@ -4,7 +4,7 @@
   "license": "MIT",
   "description": "A micro RAD solution for Wordpress REST API themes",
   "require": {
-    "illuminate/http": "5.*",
+    "illuminate/http": "5.5.44",
     "wp-kit/registry": "^2.0",
     "wp-kit/foundation": "^2.0",
     "filp/whoops": "^2.3",
