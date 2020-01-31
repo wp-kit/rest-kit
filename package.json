@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "A micro RAD for developing Wordpress REST API themes",
   "scripts": {
-    "build": "NODE_ENV='production' webpack --mode production"
+    "build": "export NODE_ENV=production; webpack --mode production",
+    "watch": "webpack-dev-server --mode development --watch --hot --inline",
+    "start": "npm run watch --silent"
   },
   "author": "",
   "license": "ISC",
@@ -30,12 +32,7 @@
     "url-loader": "^1.1.1",
     "webpack": "^4.14.0",
     "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.10.2",
     "webpack-manifest-plugin": "^2.0.4"
-  },
-  "dependencies": {
-    "classnames": "^2.2.6",
-    "jquery-colorbox": "^1.6.4",
-    "re-resizable": "^4.11.0",
-    "slick-carousel": "^1.8.1"
   }
 }
