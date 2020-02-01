@@ -3,13 +3,13 @@
 	namespace Theme\Controllers;
 	
 	use WPKit\Invoker\Controller;
-	use Illuminate\Support\Facades\Input;
+	use Illuminate\Support\Facades\Request;
 	
 	class AppController extends Controller {
 		
 		protected $scripts_action = 'admin_enqueue_scripts';
 		
-		public function beforeFilter(Input $request) {
+		public function beforeFilter(Request $request) {
 			
 			filter( 'site_url', function( $url ) {
 
