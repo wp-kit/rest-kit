@@ -8,7 +8,7 @@
     "wp-kit/registry": "^2.0",
     "wp-kit/foundation": "^2.0",
     "filp/whoops": "^2.7",
-    "wp-kit/invoker": "^2.0",
+    "wp-kit/invoker": "^2.0.5",
     "wp-kit/gutenberg-object-plugin": "^2.0"
   }
 }
