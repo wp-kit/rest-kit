@@ -3,7 +3,7 @@
 	namespace Theme\Controllers;
 	
 	use WPKit\Invoker\Controller;
-	use Illuminate\Support\Facades\Input;
+	use Illuminate\Support\Facades\Request;
 	use GutesObjectPlugin\Database;
 	use GutesObjectPlugin\GutesObjectPlugin;
 	
@@ -11,7 +11,7 @@
 		
 		protected $scripts_action = 'admin_enqueue_scripts';
 		
-		public function beforeFilter(Input $request) {
+		public function beforeFilter(Request $request) {
 			
 			if( empty( $GLOBALS['gutenbergObjectPlugin'] ) ) {
 			
