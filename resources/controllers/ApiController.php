@@ -3,11 +3,11 @@
 	namespace Theme\Controllers;
 	
 	use WPKit\Invoker\Controller;
-	use Illuminate\Support\Facades\Input;
+	use Illuminate\Support\Facades\Request;
 	
 	class ApiController extends Controller  {
 		
-		public function beforeFilter(Input $request) {
+		public function beforeFilter(Request $request) {
 			
 			register_rest_field(
 				['test', 'post'],
