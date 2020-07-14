@@ -7,7 +7,10 @@ return [
 	Theme\Providers\FunctionsServiceProvider::class,
 	Theme\Providers\SupportServiceProvider::class,
 	WPKit\Invoker\InvokerServiceProvider::class,
-	Theme\Providers\HttpServiceProvider::class,
+	Illuminate\View\ViewServiceProvider::class,
+	Illuminate\Events\EventServiceProvider::class,
 	Illuminate\Filesystem\FilesystemServiceProvider::class,
-    WPKit\Registry\RegistryServiceProvider::class
+	Theme\Providers\HttpServiceProvider::class,
+    WPKit\Registry\RegistryServiceProvider::class,
+    WPKit\Integrations\Acf\AcfServiceProvider::class
 ];

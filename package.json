@@ -35,5 +35,8 @@
     "webpack-dev-server": "^3.10.2",
     "webpack-manifest-plugin": "^2.0.4",
     "string-replace-loader": "^2.2.0"
+  },
+  "dependencies": {
+    "slick-carousel": "^1.8.1"
   }
 }
