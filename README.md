@@ -16,6 +16,7 @@ Working with Bedrock?
 * `composer require wp-kit/rest-kit`
 * `mv web/app/themes/rest-kit/package.json ./package.json`
 * `mv web/app/themes/rest-kit/webpack.config.js ./webpack.config.js`
+* Update webpack.config.js `const themeFolder = './web/app/themes/rest-kit';`
 * `npm i`
 * `npm run build`
 
