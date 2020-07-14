@@ -14,8 +14,8 @@ Working with Bedrock?
 
 * Install Bedrock
 * `composer require wp-kit/rest-kit`
-* `rm ./package.json && mv web/app/themes/rest-kit/package.json ./package.json`
-* `rm ./webpack.config.js && mv web/app/themes/rest-kit/webpack.config.js ./webpack.config.js`
+* `(rm ./package.json || true) && mv web/app/themes/rest-kit/package.json ./package.json`
+* `(rm ./webpack.config.js || true) && mv web/app/themes/rest-kit/webpack.config.js ./webpack.config.js`
 * Update webpack.config.js `const themeFolder = './web/app/themes/rest-kit';`
 * `npm i`
 * `npm run build`
