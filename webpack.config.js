@@ -5,12 +5,14 @@ const webpack = require('webpack'),
 	manifest = require('webpack-manifest-plugin'),
 	uglify = require('uglifyjs-webpack-plugin');
 
-var appCss = new extract('admin/css/app.[hash].css');
+const themeFolder = './';
+
+var appCss = new extract(`${themeFolder}/admin/css/app.[hash].css`);
 
 module.exports = {
-    entry: './resources/scripts/app.js',
+    entry: `${themeFolder}/resources/scripts/app.js`,
     output: {
-        filename: 'admin/js/app.[hash:6].js',
+        filename: `${themeFolder}/admin/js/app.[hash:6].js`,
         path: path.resolve(__dirname, './')
     },
     resolve: {
@@ -29,11 +31,16 @@ module.exports = {
             $: 'jquery'
         }),
 	    new clean([
-			'./admin'
+			`${themeFolder}/admin`
 		]),
 		appCss,
 		new manifest({
-			writeToFileEmit: true
+			fileName: `${themeFolder}/manifest.json`,
+			writeToFileEmit: true,
+			map: (file) => {
+				file.path = file.path.replace(`${themeFolder}/`, '')
+				return file
+			}
 		})
 	],
 	optimization: {
