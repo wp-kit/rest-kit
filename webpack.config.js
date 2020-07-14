@@ -52,6 +52,15 @@ module.exports = {
 	    rules: [
 		    {
 				test: /\.js$/,
+				exclude: /(node_modules|bower_components|vendor)/,
+				loader: 'string-replace-loader',
+				options: {
+					search: '$_VENDOR_FOLDER',
+					replace: path.resolve(__dirname, './vendor')
+				}
+			},
+		    {
+				test: /\.js$/,
 				exclude: /(node_modules|bower_components)/,
 		        loader: 'babel-loader',
 		        options: {
