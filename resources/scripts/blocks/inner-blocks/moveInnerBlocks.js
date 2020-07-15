@@ -17,30 +17,4 @@ export default ($preview, attributes, block) => {
 		
 	}
 	
-	Array.from(preview.querySelectorAll('[contenteditable][data-attribute]')).forEach(el => {
-		
-		el.addEventListener('input', () => {
-			
-			let attribute = el.getAttribute('data-attribute')
-		
-			let field = document.querySelector(`.acf-block-fields .acf-field[data-name="${attribute}"]`)
-			
-			if( field ) {
-			
-				let key = field.getAttribute('data-key')
-				
-				let input = field.querySelector(`[name="acf-${attributes.id}[${key}]"]`)
-				
-				if( input ) {
-					
-					$(input).val(el.innerHTML).trigger('change')
-					
-				}
-				
-			}
-			
-		})
-		
-	})
-	
 }
