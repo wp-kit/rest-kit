@@ -7,6 +7,7 @@
 Download [Composer](https://getcomposer.org/download/) and install using this command
 
  ```php
+cd wp-content/themes
 composer create-project wp-kit/rest-kit rest-kit --prefer-dist
  ```
  
@@ -14,6 +15,7 @@ Working with Bedrock?
 
 * Install Bedrock
 * `composer require wp-kit/rest-kit`
+* `cp vendor/wp-kit/rest-kit web/app/themes/rest-kit`
 * `(rm ./package.json || true) && mv web/app/themes/rest-kit/package.json ./package.json`
 * `(rm ./webpack.config.js || true) && mv web/app/themes/rest-kit/webpack.config.js ./webpack.config.js`
 * Update webpack.config.js `const themeFolder = './web/app/themes/rest-kit';`
