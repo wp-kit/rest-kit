@@ -26,6 +26,14 @@
 				return $data;
 			});
 			
+			filter('acf/format_value/type=post_object', function($value) {
+				if($value instanceof \WP_Post) {
+					$response = (new \WP_REST_Posts_Controller($value->post_type))->prepare_item_for_response($value, ['context' => 'view']);
+					$value = $response->data;
+				}
+				return $value;
+			});
+			
 			parent::beforeFilter($request);
 			
 		}
