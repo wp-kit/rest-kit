@@ -9,7 +9,12 @@
 		
 		protected $scripts_action = 'admin_enqueue_scripts';
 		
-		public function beforeFilter(Request $request) {
+		/**
+	     * Default controller method when controller is invoked
+	     *
+	     * @return void
+	     */
+		public function boot(Request $request) {
 			
 			filter( 'block_categories', function($categories, $post) {
 				return array_merge(
@@ -37,8 +42,6 @@
 				return $types;
 				
 			}, 1);
-			
-			parent::beforeFilter($request);
 			
 		}
 		
