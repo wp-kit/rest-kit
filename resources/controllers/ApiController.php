@@ -7,7 +7,12 @@
 	
 	class ApiController extends Controller  {
 		
-		public function beforeFilter(Request $request) {
+		/**
+	     * Default controller method when controller is invoked
+	     *
+	     * @return void
+	     */
+		public function boot(Request $request) {
 			
 			register_rest_field(
 				['test', 'post'],
@@ -34,8 +39,6 @@
 				}
 				return $value;
 			});
-			
-			parent::beforeFilter($request);
 			
 		}
 		
