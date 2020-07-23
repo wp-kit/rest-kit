@@ -19,6 +19,13 @@
 				)
 			);
 			
+			filter('rest_prepare_page', function($data) {
+				if(!is_admin()) {
+					unset($data->data['content']);
+				}
+				return $data;
+			});
+			
 			parent::beforeFilter($request);
 			
 		}

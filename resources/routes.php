@@ -1,11 +1,5 @@
 <?php
 
-	if( defined('GUTENBERG_OBJECT_PLUGIN_CPTS') ) {
-
-		invoke( 'GutenbergController', 'init' );
-		
-	}
-
 	invoke( 'AppController', 'init' );
 	invoke( 'ApiController', 'rest_api_init' );
 	

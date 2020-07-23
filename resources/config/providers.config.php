@@ -12,5 +12,6 @@ return [
 	Illuminate\Filesystem\FilesystemServiceProvider::class,
 	Theme\Providers\HttpServiceProvider::class,
     WPKit\Registry\RegistryServiceProvider::class,
-    WPKit\Integrations\Acf\AcfServiceProvider::class
+    WPKit\Integrations\Acf\AcfServiceProvider::class,
+    GutesObjectPlugin\Provider::class
 ];
