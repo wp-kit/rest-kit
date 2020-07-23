@@ -11,16 +11,22 @@ cd wp-content/themes
 composer create-project wp-kit/rest-kit rest-kit --prefer-dist
  ```
  
-Working with Bedrock?
+## Working with Bedrock?
 
-* Install Bedrock
-* `composer require wp-kit/rest-kit`
-* `cp vendor/wp-kit/rest-kit web/app/themes/rest-kit`
-* `(rm ./package.json || true) && mv web/app/themes/rest-kit/package.json ./package.json`
-* `(rm ./webpack.config.js || true) && mv web/app/themes/rest-kit/webpack.config.js ./webpack.config.js`
-* Update webpack.config.js `const themeFolder = './web/app/themes/rest-kit';`
-* `npm i`
-* `npm run build`
+Firstly, install Bedrock, then;
+
+```
+composer require wp-kit/rest-kit
+cp vendor/wp-kit/rest-kit web/app/themes/rest-kit
+(rm ./package.json || true) && mv web/app/themes/rest-kit/package.json ./package.json
+(rm ./webpack.config.js || true) && mv web/app/themes/rest-kit/webpack.config.js ./webpack.config.js
+
+// inside webpack.config.js change the following
+const themeFolder = './web/app/themes/rest-kit';
+
+npm i
+npm run build
+```
 
 ## When should you use wp-kit/rest-kit?
 
