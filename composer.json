@@ -1,6 +1,6 @@
 {
   "name": "wp-kit/rest-kit",
-  "type": "wordpress-theme",
+  "type": "wordpress-theme-kit",
   "license": "MIT",
   "description": "A micro RAD solution for Wordpress REST API themes",
   "require": {
