@@ -31,15 +31,6 @@
 				return $data;
 			});
 			
-			filter('acf/format_value/type=post_object', 'convertPostToResponse');
-			filter('acf/format_value/type=relationship', function($value) {
-				$value = is_array($value) ? $value : [];
-				foreach($value as &$post) {
-					$post = $this->convertPostToResponse($post);
-				}
-				return $value;
-			});
-			
 		}
 		
 		/**
@@ -68,16 +59,6 @@
             }
 
             return $menu;
-			
-		}
-		
-		public function convertPostToResponse($value) {
-			
-			if($value instanceof \WP_Post) {
-				$response = (new \WP_REST_Posts_Controller($value->post_type))->prepare_item_for_response($value, ['context' => 'view']);
-				$value = $response->data;
-			}
-			return $value;
 			
 		}
 		

@@ -22,6 +22,15 @@
 		    ]
 	    ],
 	    
+	    /*
+	    |--------------------------------------------------------------------------
+	    | ACF Blocks
+	    |--------------------------------------------------------------------------
+	    |
+	    | Tell the Service Provider which blocks and block categories to register
+	    |
+	    */
+	    
 	    'blocks' => [
 		    [
 			    'name' => 'example-block',
@@ -41,11 +50,26 @@
 		],
 		
 		'block_categories' => [
-		    [
+			[
 				'slug' => 'rest-kit-example-blocks',
 				'title' => 'Rest Kit Examples',
 			]
-	   	],
+		],
+		
+		/*
+	    |--------------------------------------------------------------------------
+	    | ACF API
+	    |--------------------------------------------------------------------------
+	    |
+	    | Tell the Service Provider which API options to turn on
+	    |
+	    */
+		
+		'api' => [
+		
+			'transform_post_objects_to_response' => true
+		
+		],
 	
 	    /*
 	    |--------------------------------------------------------------------------
