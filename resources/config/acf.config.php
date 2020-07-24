@@ -41,6 +41,13 @@
 			    'render_callback' => array(Theme\Controllers\AppController::class, 'renderBlock')
 		    ]
 		],
+		
+		'block_categories' => [
+		    [
+				'slug' => 'rest-kit-example-blocks',
+				'title' => 'Rest Kit Examples',
+			]
+	   	],
 	
 	    /*
 	    |--------------------------------------------------------------------------
