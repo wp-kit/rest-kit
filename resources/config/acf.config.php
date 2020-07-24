@@ -29,16 +29,14 @@
 			    'category' => 'rest-kit-example-blocks',
 			    'icon' => 'welcome-widgets-menus',
 			    'description' => 'An example block',
-			    'has_inner_blocks' => true,
-			    'render_callback' => array(Theme\Controllers\AppController::class, 'renderBlock')
+			    'has_inner_blocks' => true
 		    ],
 		    [
 			    'name' => 'slider-block',
 			    'title' => 'Slider Block',
 			    'category' => 'rest-kit-example-blocks',
 			    'icon' => 'welcome-widgets-menus',
-			    'description' => 'Used to display sliders',
-			    'render_callback' => array(Theme\Controllers\AppController::class, 'renderBlock')
+			    'description' => 'Used to display sliders'
 		    ]
 		],
 		
