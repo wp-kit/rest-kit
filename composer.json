@@ -10,7 +10,6 @@
     "wp-kit/invoker": "^2.0.5",
     "wp-kit/gutenberg-object-plugin": "^2.0",
     "vlucas/phpdotenv": "^3.4.0",
-    "wp-kit/acf-integration": "^2.0",
-    "illuminate/view": "^6.0"
+    "wp-kit/acf-integration": "^2.0"
   }
 }
