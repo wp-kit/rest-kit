@@ -2,7 +2,13 @@
   "name": "wp-kit/rest-kit",
   "license": "MIT",
   "description": "A micro RAD solution for Wordpress REST API themes",
+  "keywords": ["wordpress", "wpkit", "restkit", "rad", "rapid application development", "oop"],
+    "license": "MIT",
+	"config": {
+		"preferred-install": "dist"
+  },
   "require": {
+    "php": "^7.4",
     "illuminate/http": "^6.0",
     "wp-kit/registry": "^2.0",
     "wp-kit/foundation": "^2.0",
