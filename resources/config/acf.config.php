@@ -27,36 +27,20 @@
 	    | ACF Blocks
 	    |--------------------------------------------------------------------------
 	    |
-	    | Tell the Service Provider which blocks and block categories to register
+	    | Tell the Service Provider the ACF blocks required
 	    |
 	    */
-	    
-	    'blocks' => [
-		    [
-			    'name' => 'example-block',
-			    'title' => 'Example Block',
-			    'category' => 'rest-kit-example-blocks',
-			    'icon' => 'welcome-widgets-menus',
-			    'description' => 'An example block',
-			    'has_inner_blocks' => true
-		    ],
-		    [
-			    'name' => 'slider-block',
-			    'title' => 'Slider Block',
-			    'category' => 'rest-kit-example-blocks',
-			    'icon' => 'welcome-widgets-menus',
-			    'description' => 'Used to display sliders'
-		    ]
-		],
+	
+	    'blocks' => [],
 		
-		'block_categories' => [
-			[
+	    'block_categories' => [
+		    [
 				'slug' => 'rest-kit-example-blocks',
 				'title' => 'Rest Kit Examples',
 			]
-		],
+	   	],
 		
-		/*
+	   	/*
 	    |--------------------------------------------------------------------------
 	    | ACF API
 	    |--------------------------------------------------------------------------
@@ -67,7 +51,9 @@
 		
 		'api' => [
 		
-			'transform_post_objects_to_response' => true
+			'transform_post_objects_to_response' => true,
+			
+			'transform_numbers_to_floats' => true
 		
 		],
 	
