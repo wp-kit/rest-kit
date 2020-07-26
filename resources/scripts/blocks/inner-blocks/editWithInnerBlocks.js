@@ -1,6 +1,3 @@
-const { Fragment } = wp.element
-const { InnerBlocks } = wp.editor
-
 export default (
   blockName,
   innerBlockParams,
@@ -10,6 +7,8 @@ export default (
   if (props.name !== blockName) {
     return <BlockEdit {...props} />;
   }
+  const { Fragment } = wp.element
+  const { InnerBlocks } = wp.editor
   if (append) {
     return (
       <Fragment>

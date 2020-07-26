@@ -1,5 +1,3 @@
-const { InnerBlocks } = wp.editor
-
 export default blockName => (BlockSave, block) => {
   if (typeof block === "undefined") {
     return BlockSave;
@@ -8,6 +6,8 @@ export default blockName => (BlockSave, block) => {
   if (block.name !== blockName) {
     return BlockSave || block.save;
   }
+  
+  const { InnerBlocks } = wp.editor
 
   return (
     <div>
