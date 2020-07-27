@@ -8,14 +8,14 @@
 		
 		add_action( 'rest_api_init', function() use($namespace, $callback, $route, $methods) {
 		
-			register_rest_route( $namespace, $route, array(
+			register_rest_route( $namespace, $route, [
 				'methods' => $methods,
 				'callback' => function($request) use($callback) {
 					
-					return app(Invoker::class)->parseCallback($callback)( $request );
+					return app(Invoker::class)->registerCallback($callback)( $request );
 					
 				},
-			) );
+			] );
 			
 		} );
 		
