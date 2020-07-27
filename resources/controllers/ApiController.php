@@ -17,11 +17,11 @@
 			register_rest_field(
 				['test', 'post'],
 				'featured_image_url',
-				array(
-					'get_callback'    => array($this, 'getFeaturedImageUrl'),
+				[
+					'get_callback'    => [$this, 'getFeaturedImageUrl'],
 					'update_callback' => null,
 					'schema'          => null,
-				)
+				]
 			);
 			
 			filter('rest_prepare_page', function($data) {
