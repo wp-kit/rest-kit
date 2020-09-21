@@ -9,13 +9,12 @@
   },
   "require": {
     "php": "^7.4",
-    "illuminate/http": "^6.0",
+    "illuminate/http": "^8.0",
     "wp-kit/registry": "^2.0",
     "wp-kit/foundation": "^2.0",
     "filp/whoops": "^2.7",
     "wp-kit/invoker": "^2.0.5",
     "wp-kit/gutenberg-object-plugin": "^2.0",
-    "vlucas/phpdotenv": "^3.4.0",
     "wp-kit/acf-integration": "^2.0"
   },
   "require-dev": {
