@@ -14,6 +14,19 @@
 	     */
 		public function boot(Request $request) {
 			
+			$post_types = get_post_types_by_support( [ 'editor' ] );
+			foreach ( $post_types as $post_type ) {
+				if ( use_block_editor_for_post_type( $post_type ) ) {
+					register_rest_field(
+						$post_type,
+						'blocks',
+						['get_callback' => function ( array $post ) {
+							return $this->transform( json_decode( json_encode( parse_blocks( $post['content']['raw'] ) ) ) );
+						}]
+					);
+				}
+			}
+			
 			register_rest_field(
 				['test', 'post'],
 				'featured_image_url',
@@ -59,6 +72,47 @@
             }
 
             return $menu;
+			
+		}
+		
+		protected function transform( $blocks ) {
+	
+			foreach($blocks as &$block) {
+				
+				$block->innerText = trim(preg_replace('/\s\s+/', ' ', strip_tags( $block->innerHTML )));
+				
+				if(strpos($block->blockName, 'acf/') === 0) {
+				
+					acf_setup_meta( json_decode(json_encode($block->attrs->data), true), $block->attrs->id, true );
+					
+					$id = $block->attrs->id;
+					
+					unset($block->attrs->name);
+					unset($block->attrs->id);
+					unset($block->attrs->data);
+					
+					$block = (object) [
+						'name' => $block->blockName,
+						'innerBlocks' => $block->innerBlocks,
+						'innerText' => $block->innerText,
+						'data' => (object) array_merge((array) $block->attrs, get_fields($id))
+					];
+				}
+				else {
+					$block = (object) [
+						'name' => $block->blockName,
+						'innerBlocks' => $block->innerBlocks,
+						'innerText' => $block->innerText,
+						'data' => $block->attrs
+					];
+				}
+				
+				if(!empty($block->innerBlocks) && is_array($block->innerBlocks)) {
+					$block->innerBlocks = $this->transform($block->innerBlocks);
+				}
+			}
+			
+			return array_values(array_filter($blocks, fn($block) => $block->name));
 			
 		}
 		
