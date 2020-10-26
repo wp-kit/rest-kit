@@ -51,9 +51,9 @@ Any help is appreciated. The project is open-source and we encourage you to part
 
 ## Requirements
 
-Wordpress 4+
+Wordpress 5+
 
-PHP 5.6+
+PHP 7.4+
 
 Composer
 
