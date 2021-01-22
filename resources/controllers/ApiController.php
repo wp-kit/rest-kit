@@ -26,7 +26,8 @@
 						$post_type,
 						'gblocks',
 						['get_callback' => function ( array $post ) {
-							return apply_filters( 'rest_response_parse_blocks', json_decode( json_encode( parse_blocks( $post['content']['raw'] ) ) ), $post, $post_type );
+							$blocks = apply_filters( 'rest_response_parse_blocks', json_decode( json_encode( parse_blocks( $post['content']['raw'] ) ) ), $post, $post_type );
+							return array_values(array_filter($blocks, fn($block) => $block->blockName));
 						}]
 					);
 				}
