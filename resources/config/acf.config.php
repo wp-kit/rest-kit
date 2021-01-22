@@ -69,7 +69,9 @@
 		
 			'transform_post_objects_to_response' => true,
 			
-			'transform_numbers_to_floats' => true
+			'transform_numbers_to_floats' => true,
+			
+			'transform_blocks_for_api' => true
 		
 		],
 	
