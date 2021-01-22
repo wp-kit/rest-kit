@@ -1,6 +1,6 @@
 # wp-kit/rest-kit
 
-```rest-kit``` is a micro [```RAD```](https://en.wikipedia.org/wiki/Rapid_application_development) solution for ```Wordpress REST API themes```.
+```rest-kit``` is a micro [```RAD```](https://en.wikipedia.org/wiki/Rapid_application_development) solution for using Wordpress as a Headless CMS.
 
 ## Installation
 
