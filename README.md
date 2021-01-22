@@ -43,7 +43,7 @@ If you're looking for a theme to be able to build and manage custom Gutenberg bl
 
 We recommend the following plugins depending your use case:
 
-|Plugin|Use Case|Explanation|
+|Plugin|&nbsp;&nbsp;&nbsp;&nbsp;Use Case&nbsp;&nbsp;&nbsp;&nbsp;|Explanation|
 |----|------|------|
 |[WP Rest Filter](https://wordpress.org/plugins/wp-rest-filter/)|When using [wp-sapper-start](https://github.com/wp-kit/wp-sapper-start)|In the boilerplate code for wp-sapper-start, we have included examples of filtering by term and author slugs, and have implemented this based on using WP Rest Filter|
 |[Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)|When using [wp-sapper-start](https://github.com/wp-kit/wp-sapper-start)|In the boilerplate code for wp-sapper-start, we have included examples of <head> meta tags, and have implemented this based on using Yoast SEO and WP Rest Yoast Meta|
