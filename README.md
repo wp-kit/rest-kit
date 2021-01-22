@@ -57,9 +57,13 @@ We recommend the following plugins depending your use case:
 
 __Menu Endpoint__
 
+We have recently removed the Menu endpoint by default from the boilerplate code in favour of using [WP Rest API V2 Menus](https://wordpress.org/plugins/wp-rest-api-v2-menus/). You can easily add this back:
+
 [Add Menu endpoint in wp-kit/rest-kit, if you don't want to use plugins/wp-rest-api-v2-menus](https://gist.github.com/terence1990/64ac107521142f2e65d8bf9053f7934f)
 
 __Adjusting Gutenberg JSON__
+
+We have recently pruned the transformation code right back so the schema of blocks received in the response is exactly the schema provided by `parse_blocks()`. You can change and transform this however you wish:
 
 [Adjusting Gutenberg Block output in REST Response](https://gist.github.com/terence1990/223aa816df7d600005e55c39e9598b5d)
 
