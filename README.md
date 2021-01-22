@@ -30,10 +30,11 @@ npm run build
 
 ## When should you use wp-kit/rest-kit?
 
-If you're looking for a theme to be able to build and manage custom Gutenberg blocks, and to consume Gutenberg block data via Wordpress Rest API, as well easily register Post Types and Taxonomies then this is a the perfect framework. Features include;
+If you're looking for a theme to be able to build and manage custom Gutenberg blocks (both React style or with ACF Blocks) and want to manage how blocks looks and are styled in the editor and want to consume Gutenberg block data via Wordpress Rest API, and would like to easily register Post Types and Taxonomies and organise your code contextually within Controller and PostType/Taxonomy classes then this is a the perfect framework. Features include;
 
-* Webpack configuration to easily create / edit Gutenberg blocks
-* Gutenberg Blocks are JSONified and send with Post data in WP REST API
+* Webpack configuration to easily create / edit and style Gutenberg blocks for the editor
+* Gutenberg Blocks are JSONified and send in WP REST API response for Posts (CPT) and Pages
+* ACF Blocks are easily registered via config and managed via view files for the editor 
 * ServiceProvider Config
 * PostType Registration
 * Taxonomy Registration
