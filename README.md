@@ -40,6 +40,12 @@ If you're looking for a framework to be able to build and manage custom Gutenber
 * Taxonomy Registration
 * Invoke Controllers on Conditions
 
+## Just want to get Blocks in WP REST Response?
+
+One of the key features on rest-kit is that it outputs JSON Blocks, including ACF Blocks, for Posts and Pages in the API response under a property `gblocks`. This framework is great when you want to also add custom React-style blocks or register and manage ACF Blocks but if you don't need those features or feel rest-kit is too overkill for you, we have abstracted the JSON Blocks feature away into it's own plugin:
+
+[WP ACF Rest API Blocks](https://github.com/wp-kit/wp-acf-rest-api-blocks)
+
 ## Recommended Plugins
 
 We recommend the following plugins depending your use case:
