@@ -38,7 +38,9 @@
 			    'category' => 'rest-kit-example-block',
 			    'icon' => 'welcome-widgets-menus',
 			    'description' => 'An example block',
-			    'has_inner_blocks' => true
+			    'supports' => [
+					'jsx' => true
+				]
 		    ],
 		    [
 			    'name' => 'slider-block',
