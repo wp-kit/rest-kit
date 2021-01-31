@@ -1,2 +1,2 @@
-import './inner-blocks';
+import './acf';
 import './style.scss';
